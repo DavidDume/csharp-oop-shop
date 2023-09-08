@@ -3,8 +3,16 @@
 
 using csharp_oop_shop;
 
-Prodotto item = new Prodotto("Libro", "Lorem Ipsum", 9.99f);
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Prodotto item = new Prodotto("Libro", "Lorem Ipsum", 9.99f);
 
 
-Console.WriteLine(item.GetFull());
-Console.WriteLine(item.GetPriceVAT());
+        Console.WriteLine(item.GetFull());
+        Console.WriteLine(item.GetPriceVAT());
+
+        Console.WriteLine(item.GetCodeWithPad(12344556));
+    }
+}

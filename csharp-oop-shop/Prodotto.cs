@@ -31,5 +31,18 @@ namespace csharp_oop_shop
         {
             return this.codice.ToString()+ " " + this.nome;
         }
+
+        public string GetCodeWithPad(int code)
+        {
+            string strCode = code.ToString();
+            if(strCode.Length < 8)
+            {
+          
+                strCode = strCode.PadLeft(8, '0');
+                return strCode;
+            }
+            return strCode;
+            
+        }
     }
 }
