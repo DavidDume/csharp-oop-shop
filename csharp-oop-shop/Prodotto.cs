@@ -44,5 +44,10 @@ namespace csharp_oop_shop
             return strCode;
             
         }
+
+        public void GetInfo()
+        {
+            Console.WriteLine($"Il nome è {this.nome}\nDescrizione: {this.descrizione}\nPrezzo {this.prezzo}");
+        }
     }
 }

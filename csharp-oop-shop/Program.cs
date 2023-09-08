@@ -14,5 +14,27 @@ internal class Program
         Console.WriteLine(item.GetPriceVAT());
 
         Console.WriteLine(item.GetCodeWithPad(12344556));
+
+
+        Prodotto[] arr = new Prodotto[5];
+
+        for(int i  = 0; i < arr.Length; i++)
+        {
+            Console.WriteLine("Inserisci Il nome del prodotto");
+            string name = Console.ReadLine();
+            Console.WriteLine("Inserisci la descrizione del prodotto");
+            string descrizione = Console.ReadLine();
+            Console.WriteLine("Inserisci Il prezzo del prodotto");
+            float prezzo = float.Parse(Console.ReadLine());
+            arr[i] = new Prodotto(name, descrizione, prezzo);
+
+            
+        }
+
+        for(int i = 0;i < arr.Length;i++)
+        {
+            Console.WriteLine($"Prodotto numero {i+1}: ");
+            arr[i].GetInfo();
+        }
     }
 }
